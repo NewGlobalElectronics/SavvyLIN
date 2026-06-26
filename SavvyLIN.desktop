@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=SavvyLIN
+GenericName=CANBus reverse engineering tool
+Comment=Facilitates reverse engineering of canbus captures
+Exec=SavvyLIN
+Icon=SavvyLIN
+Terminal=false
+Categories=Development;Electronics;IDE;
+MimeType=text/x-application;
+Keywords=embedded electronics;electronics;canbus;reverse engineering;
