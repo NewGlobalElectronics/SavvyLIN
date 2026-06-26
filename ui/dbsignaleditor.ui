@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dbSignalEditor</class>
+ <widget class="QDialog" name="dbSignalEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>995</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Signal Editor</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="10,1,4">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text"><string>Name:</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="txtName"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="CANDataGrid" name="bitfield" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>300</width>
+           <height>300</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout_2">
+
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text"><string>Bit Length:</string></property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="txtBitLength"/>
+       </item>
+
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text"><string>Byte Order</string></property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="cbIntelFormat">
+         <property name="text"><string>LSB First (Little Endian)</string></property>
+        </widget>
+       </item>
+
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text"><string>Type:</string></property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboType"/>
+       </item>
+
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_initval">
+         <property name="text"><string>Init Value:</string></property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="txtInitValue">
+         <property name="placeholderText">
+          <string>e.g. 0 or {0, 0, 0, 0, 0}</string>
+         </property>
+        </widget>
+       </item>
+
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text"><string>Scale:</string></property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="txtScale"/>
+       </item>
+
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text"><string>Bias:</string></property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="txtBias"/>
+       </item>
+
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text"><string>Min Value:</string></property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="txtMinVal"/>
+       </item>
+
+       <item row="7" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text"><string>Max Value:</string></property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="txtMaxVal"/>
+       </item>
+
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text"><string>Units Name:</string></property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="QLineEdit" name="txtUnitName"/>
+       </item>
+
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text"><string>Receiving Node:</string></property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QComboBox" name="comboReceiver"/>
+       </item>
+
+       <item row="10" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text"><string>Comment:</string></property>
+        </widget>
+       </item>
+       <item row="10" column="1">
+        <widget class="QLineEdit" name="txtComment"/>
+       </item>
+
+      </layout>
+     </item>
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text"><string>Value Table:</string></property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QTableWidget" name="valuesTable"/>
+   </item>
+
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CANDataGrid</class>
+   <extends>QWidget</extends>
+   <header>candatagrid.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>txtBitLength</tabstop>
+  <tabstop>cbIntelFormat</tabstop>
+  <tabstop>comboType</tabstop>
+  <tabstop>txtInitValue</tabstop>
+  <tabstop>txtScale</tabstop>
+  <tabstop>txtBias</tabstop>
+  <tabstop>txtMinVal</tabstop>
+  <tabstop>txtMaxVal</tabstop>
+  <tabstop>txtUnitName</tabstop>
+  <tabstop>comboReceiver</tabstop>
+  <tabstop>txtComment</tabstop>
+  <tabstop>valuesTable</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

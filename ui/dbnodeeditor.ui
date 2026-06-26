@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dbNodeEditor</class>
+ <widget class="QDialog" name="dbNodeEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Node Editor (LIN)</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_name">
+       <property name="text"><string>Node Name:</string></property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineMsgName"/>
+     </item>
+
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_comment">
+       <property name="text"><string>Comments:</string></property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineComment"/>
+     </item>
+
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_master">
+       <property name="text"><string>Is Master:</string></property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QCheckBox" name="cbIsMaster">
+       <property name="text"><string></string></property>
+      </widget>
+     </item>
+
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_timebase">
+       <property name="text"><string>Time Base (ms):</string></property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineTimeBase">
+       <property name="placeholderText"><string>e.g. 5</string></property>
+      </widget>
+     </item>
+
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_jitter">
+       <property name="text"><string>Jitter (ms):</string></property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineJitter">
+       <property name="placeholderText"><string>e.g. 0.1</string></property>
+      </widget>
+     </item>
+
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_protocol">
+       <property name="text"><string>LIN Protocol:</string></property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="lineProtocolVersion">
+       <property name="placeholderText"><string>e.g. 2.1</string></property>
+      </widget>
+     </item>
+
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_configuredNAD">
+       <property name="text"><string>Configured NAD (hex):</string></property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="lineConfiguredNAD">
+       <property name="placeholderText"><string>e.g. 0x4F</string></property>
+      </widget>
+     </item>
+
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_initialNAD">
+       <property name="text"><string>Initial NAD (hex):</string></property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="lineInitialNAD">
+       <property name="placeholderText"><string>e.g. 0x4F</string></property>
+      </widget>
+     </item>
+
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_supplierID">
+       <property name="text"><string>Supplier ID (hex):</string></property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="lineSupplierID">
+       <property name="placeholderText"><string>e.g. 0x0</string></property>
+      </widget>
+     </item>
+
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_functionID">
+       <property name="text"><string>Function ID (hex):</string></property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QLineEdit" name="lineFunctionID">
+       <property name="placeholderText"><string>e.g. 0x0</string></property>
+      </widget>
+     </item>
+
+     <item row="10" column="0">
+      <widget class="QLabel" name="label_variant">
+       <property name="text"><string>Variant:</string></property>
+      </widget>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLineEdit" name="lineVariant">
+       <property name="placeholderText"><string>e.g. 0</string></property>
+      </widget>
+     </item>
+
+     <item row="11" column="0">
+      <widget class="QLabel" name="label_responseError">
+       <property name="text"><string>Response Error Signal:</string></property>
+      </widget>
+     </item>
+     <item row="11" column="1">
+      <widget class="QLineEdit" name="lineResponseError">
+       <property name="placeholderText"><string>e.g. RESP_ERR_PECP</string></property>
+      </widget>
+     </item>
+
+     <item row="12" column="0">
+      <widget class="QLabel" name="label_P2Min">
+       <property name="text"><string>P2_min (ms):</string></property>
+      </widget>
+     </item>
+     <item row="12" column="1">
+      <widget class="QLineEdit" name="lineP2Min">
+       <property name="placeholderText"><string>e.g. 50</string></property>
+      </widget>
+     </item>
+
+     <item row="13" column="0">
+      <widget class="QLabel" name="label_STMin">
+       <property name="text"><string>ST_min (ms):</string></property>
+      </widget>
+     </item>
+     <item row="13" column="1">
+      <widget class="QLineEdit" name="lineSTMin">
+       <property name="placeholderText"><string>e.g. 0</string></property>
+      </widget>
+     </item>
+
+     <item row="14" column="0">
+      <widget class="QLabel" name="label_NAs">
+       <property name="text"><string>N_As_timeout (ms):</string></property>
+      </widget>
+     </item>
+     <item row="14" column="1">
+      <widget class="QLineEdit" name="lineNAsTimeout">
+       <property name="placeholderText"><string>e.g. 1000</string></property>
+      </widget>
+     </item>
+
+     <item row="15" column="0">
+      <widget class="QLabel" name="label_NCr">
+       <property name="text"><string>N_Cr_timeout (ms):</string></property>
+      </widget>
+     </item>
+     <item row="15" column="1">
+      <widget class="QLineEdit" name="lineNCrTimeout">
+       <property name="placeholderText"><string>e.g. 1000</string></property>
+      </widget>
+     </item>
+
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScriptingWindowLIN</class>
+ <widget class="QDialog" name="ScriptingWindowLIN">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>862</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Scripting Interface</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Public Variables</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tableVariables"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Loaded Scripts</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listLoadedScripts"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="btnNewScript">
+         <property name="text">
+          <string>&amp;New</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRemoveScript">
+         <property name="text">
+          <string>&amp;Del</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnLoadScript">
+         <property name="text">
+          <string>&amp;Load</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,4,0,0">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Script Editing Window</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="btnSaveScript">
+         <property name="text">
+          <string>&amp;Save</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSaveAsScript">
+         <property name="text">
+          <string>Sa&amp;ve As</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRevertScript">
+         <property name="text">
+          <string>&amp;Revert</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnReloadScript">
+         <property name="text">
+          <string>R&amp;eload</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnRecompile">
+         <property name="text">
+          <string>Re&amp;compile</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Log Window</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="listLog"/>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbAutoScroll">
+       <property name="text">
+        <string>&amp;Auto Scroll Log Window</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_log">
+            <property name="alignment">
+                <set>Qt::AlignCenter</set>
+            </property>
+            <property name="contentsMargins">10, 0, 10, 0</property>
+            <item>
+                <widget class="QPushButton" name="btnClearLog">
+                    <property name="text">
+                        <string>Clear Log &amp;Window</string>
+                    </property>
+                </widget>
+            </item>
+            <item>
+                <widget class="QPushButton" name="btnSaveLog">
+                    <property name="text">
+                        <string>Save L&amp;og</string>
+                    </property>
+                </widget>
+            </item>
+        </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>listLog</tabstop>
+  <tabstop>btnNewScript</tabstop>
+  <tabstop>btnRemoveScript</tabstop>
+  <tabstop>btnLoadScript</tabstop>
+  <tabstop>listLoadedScripts</tabstop>
+  <tabstop>tableVariables</tabstop>
+  <tabstop>btnSaveScript</tabstop>
+  <tabstop>btnSaveAsScript</tabstop>
+  <tabstop>btnRevertScript</tabstop>
+  <tabstop>btnReloadScript</tabstop>
+  <tabstop>btnRecompile</tabstop>
+  <tabstop>cbAutoScroll</tabstop>
+  <tabstop>btnClearLog</tabstop>
+  <tabstop>btnSaveLog</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

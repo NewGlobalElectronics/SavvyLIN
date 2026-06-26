@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dbMessageEditor</class>
+ <widget class="QDialog" name="dbMessageEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>340</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Message Editor (LIN)</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text"><string>Frame ID (0-63):</string></property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineFrameID">
+       <property name="placeholderText"><string>0-63</string></property>
+      </widget>
+     </item>
+
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text"><string>Message Name:</string></property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineMsgName"/>
+     </item>
+
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text"><string>Frame Length (bytes):</string></property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineFrameLen">
+       <property name="placeholderText"><string>1-8</string></property>
+      </widget>
+     </item>
+
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_lintype">
+       <property name="text"><string>LIN Frame Type:</string></property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="comboLinFrameType">
+       <item><property name="text"><string>Unconditional</string></property></item>
+       <item><property name="text"><string>Sporadic</string></property></item>
+       <item><property name="text"><string>Event Triggered</string></property></item>
+       <item><property name="text"><string>Diagnostic</string></property></item>
+      </widget>
+     </item>
+
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text"><string>Text Color:</string></property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="btnTextColor">
+       <property name="text"><string>Set</string></property>
+      </widget>
+     </item>
+
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text"><string>Background Color:</string></property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="btnBackgroundColor">
+       <property name="text"><string>Set</string></property>
+      </widget>
+     </item>
+
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text"><string>Sending Node:</string></property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QComboBox" name="comboSender">
+       <property name="editable"><bool>true</bool></property>
+      </widget>
+     </item>
+
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text"><string>Comments:</string></property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="lineComment"/>
+     </item>
+
+    </layout>
+   </item>
+
+   <item>
+    <widget class="QLabel" name="label_4">
+     <property name="text"><string>Sample Colored Output:</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QListWidget" name="listSample"/>
+   </item>
+
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

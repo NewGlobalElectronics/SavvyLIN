@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrameSenderWindowLIN</class>
+ <widget class="QDialog" name="FrameSenderWindowLIN">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>1400</width><height>600</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>LIN Frame Sender</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
+
+   <!-- ── Barre haute ── -->
+   <item>
+    <layout class="QHBoxLayout" name="topBarLayout">
+     <item>
+      <widget class="QPushButton" name="btnAddFrame">
+       <property name="text"><string>+ Add Row</string></property>
+       <property name="minimumWidth"><number>100</number></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEnableAll">
+       <property name="text"><string>Enable All</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDisableAll">
+       <property name="text"><string>Disable All</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClearGrid">
+       <property name="text"><string>Clear</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="topSpacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnActivateSlave">
+       <property name="text"><string>Activate Slave on Device</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeType"><enum>QSizePolicy::Fixed</enum></property>
+       <property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnLoadGrid">
+       <property name="text"><string>Load</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSaveGrid">
+       <property name="text"><string>Save</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+   <!-- ── Table unique ── -->
+   <item>
+    <widget class="QTableWidget" name="tableSender">
+     <property name="alternatingRowColors"><bool>true</bool></property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+    </widget>
+   </item>
+
+   <!-- ── Légende couleurs ── -->
+   <item>
+    <layout class="QHBoxLayout" name="legendLayout">
+     <item>
+      <widget class="QLabel" name="lblLegend">
+       <property name="text">
+        <string>&lt;span style='background:#d0e8ff;padding:2px 8px'&gt;■ Read&lt;/span&gt; &amp;nbsp;
+&lt;span style='background:#d0ffd0;padding:2px 8px'&gt;■ Write&lt;/span&gt; &amp;nbsp;
+&lt;span style='background:#fff0cc;padding:2px 8px'&gt;■ Slave Response&lt;/span&gt;</string>
+       </property>
+       <property name="textFormat"><enum>Qt::RichText</enum></property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
